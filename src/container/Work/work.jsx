@@ -1,7 +1,8 @@
 import React , {useEffect,useState} from 'react';
 import  {AiFillEye,AiFillGithub} from 'react-icons/ai';
 import {motion} from 'framer-motion';
-import {AppWrap} from '../../wrapper';
+
+import {AppWrap,MotionWrap} from '../../wrapper';
 import {urlFor,client} from '../../client'
 import './work.scss';
 
@@ -41,7 +42,7 @@ const Work = () => {
 
   return (
     <>
-         <h2 className='head-text'>My some<span>Creative </span><br/> means <span>Work</span></h2>
+         <h2 className='head-text'>My some <span> Creative </span><br/> Glamour <span>Works</span></h2>
       
       <div className='app__works-filter'>
           {['UI/UX','Wev Dev','App Dev','CP', 'All'].map((item,index) => (
@@ -109,4 +110,8 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work,'work');
+export default AppWrap(
+  MotionWrap(Work,"app__works"),
+  "work",
+  "app__primarybg"
+);
