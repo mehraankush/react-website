@@ -3,9 +3,9 @@ import React from 'react'
 const NavigationDots = ({active}) => {
   return (
     <div className="app__navigation">
-         {['home','contact','works','testimonials','skills','about'].map((item,index)=>(
+         {['home','contact','work','testimonial','skills','about'].map((item,index)=>(
             <a 
-             href={'#${item}'}
+             href={`#${item}`}
              key = {item + index}
              className = "app__navigation-dot" 
              style = {active === item ? {backgroundColor : '#313BAC'} : { }}
@@ -15,4 +15,4 @@ const NavigationDots = ({active}) => {
   )
 }
 
-export default NavigationDots
+export default NavigationDots;
