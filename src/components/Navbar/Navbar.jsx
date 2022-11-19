@@ -3,7 +3,7 @@ import './Navbar.scss';
 import { images } from '../../constants';
 import {HiMenuAlt4,HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion'
-
+  
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -12,10 +12,10 @@ const Navbar = () => {
            <img src={images.logo} alt="logo" />
        </div>
        <ul className='app__navbar-links'>
-         {['home','contact','works','skills','about'].map((item)=>(
-          <li className='p-text app__flex' key={'list-${item}'}>
-            <div></div>
-            <a href={'#${item}'}>{item}</a>
+         {['home','contact','work','testimonial','skills','about'].map((item)=>(
+          <li className='p-text app__flex' key={`link-${item}`}>
+            <div/>
+            <a href={`#${item}`}>{item}</a>
           </li>
 
          ))}
@@ -30,9 +30,11 @@ const Navbar = () => {
                 >
                  <HiX onClick={()=>setToggle(false)}/>
                  <ul>
-                 {['home','contact','works','skills','about'].map((item)=>(
+                 {['home','contact','work','testimonial','skills','about'].map((item)=>(
                     <li  key={item}>
-                      <a href={'#${item}'} onClick={()=>setToggle(false)}>{item}</a>
+                      <a href={`#${item}`} onClick={()=>setToggle(false)}>
+                        {item}
+                      </a>
                     </li>
 
                   ))}
@@ -42,7 +44,7 @@ const Navbar = () => {
             }
         </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;
