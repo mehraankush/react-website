@@ -2,10 +2,9 @@ import React ,{useEffect,useState} from 'react';
 import './about.scss';
 import {images} from '../../constants'
 import {motion} from 'framer-motion'
-import {AppWrap} from '../../wrapper'
+import {AppWrap ,MotionWrap} from '../../wrapper'
 // import { client } from '../../client';
 import { urlFor,client } from '../../client';
-
 //static data
 // const abouts =[
 //   {title: 'web Devlepment',description :'I am a Good Developer.', imgUrl:images.about01},
@@ -20,11 +19,11 @@ const About = () => {
 
      client.fetch(query)
      .then((data) => setabouts(data))
-   }, [])
+   }, []);
    
   return (
    <> 
-     <h2 className='head-text'>I know that<span>Good Devlepment</span><br/> means <span>Good Bussiness</span></h2>
+     <h2 className='head-text'>I know that<span> Good Devlepment</span><br/> means <span>Good Bussiness</span></h2>
 
      <div className='app__profiles'>
          {abouts.map((about,index) =>(
@@ -46,4 +45,8 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About,`app__about`),
+  'about',
+  "app__whitebg"
+);
