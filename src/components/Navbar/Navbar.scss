@@ -9,8 +9,8 @@
     backdrop-filter: blur(4px);
     --webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255,255,255,0.18);
-    z-index: 2;
     position: fixed;
+    z-index: 2;
 }
 .app__navbar-logo{
  display: flex;
@@ -18,9 +18,14 @@
  align-items: center;
 
  img{
-    height: 50px;
-    width: 50px;
- }
+    height: 60px;
+    width: 60px;
+
+    @media screen and (min-width:2000px) {
+        width: 180px;
+        height: 40px;
+    }
+  }
 }
 .app__navbar-links{
     flex: 1;
@@ -36,7 +41,7 @@
         div{
             height: 5px;
             width: 5px;
-            background: rgba(255,255,255,0.25);
+            background: transparent;
             border-radius: 50%;
             margin-bottom: 5px;
         }
@@ -119,7 +124,7 @@
                 margin: 1rem;
 
                 a{
-                    color: (--gray-color);
+                    color: var(--gray-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: uppercase;
@@ -131,9 +136,9 @@
                     }
                 }
             }
-            @media  screen and (min-width:900px) {
-                display: none;
-            }
+        }
+        @media  screen and (min-width:900px) {
+            display: none;
         }
     }
     @media  screen and (min-width:900px) {
