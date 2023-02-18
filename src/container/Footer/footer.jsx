@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import {SiCodechef} from 'react-icons/si';
+import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
+import {BsTwitter,BsInstagram} from 'react-icons/bs'
+
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -42,11 +46,11 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:mehraankush36@gmail.com" className="p-text">mickey@hello.com</a>
+          <a href="mailto:mehraankush36@gmail.com" className="p-text">imdevloperr@outlook.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+918178986672" className="p-text">+1 (123)-456-7890</a>
+          <a href="tel:+918178986672" className="p-text">+91 123-456-7890</a>
         </div>
       </div>
       {!isFormSubmitted ? (
@@ -60,7 +64,7 @@ const Footer = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Your Thoughts"
               value={message}
               name="message"
               onChange={handleChangeInput}
@@ -75,6 +79,21 @@ const Footer = () => {
           </h3>
         </div>
       )}
+      <div className='app_social'>
+           <div>
+                <a href={'https://www.instagram.com/mehra_69/'}  target={'_blank'}><BsInstagram/></a> 
+           </div>
+               
+           <div>
+             <a href={'https://github.com/mehraankush' } target={'_blank'}><AiFillGithub /></a> 
+           </div>
+           <div>
+              <a href={'https://www.codechef.com/users/mehra_69'} target={'_blank'}><SiCodechef/></a>
+           </div>
+           <div>
+              <a href={'https://www.linkedin.com/in/ankush-mehra-9a57a1233/'} target={'_blank'}><AiFillLinkedin/></a>
+           </div>
+    </div>
     </>
   );
 };
