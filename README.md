@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[LINK](https://mehrankush36.netlify.app/)
+[LINK](https://ankushmehra.netlify.app/)
 <p align="center"><img style="margin-right:40px ;" align="center" src="./src/assets/website.jpeg" 
      alt="image" height="500" width="850" ></p>
      
